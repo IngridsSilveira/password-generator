@@ -5,7 +5,7 @@ import { DivBackground, InputCheckbox, InputShow, InputRange } from "./component
 function App() {
   const [inputRange, setRange] = useState<number>(8);
   return (
-    <div className="font-mono font-bold h-screen w-full flex items-center justify-center bg-slate-300">
+    <div className="font-bold h-screen w-full flex items-center justify-center bg-slate-300">
 
     <DivBackground/>
 
@@ -21,10 +21,13 @@ function App() {
      <InputRange value={inputRange} onChange={(e) => setRange(Number(e.target.value))}/>
 
       {/* INPUT CHECKBOX */}
-      <InputCheckbox id="uppercase" label="Uppercase Letters" name="uppercase"/>
-      <InputCheckbox id="lowercase" label="Lowercase Letters" name="lowercase"/>
-      <InputCheckbox id="numbers" label="Numbers" name="numbers"/>
-      <InputCheckbox id="characters" label="Special Characters" name="characters"/>      
+      <p>Characters used:</p>
+      <div className="flex">
+        <InputCheckbox id="uppercase" label="ABC" name="uppercase"/>
+        <InputCheckbox id="lowercase" label="abc" name="lowercase"/>
+        <InputCheckbox id="numbers" label="123" name="numbers"/>
+        <InputCheckbox id="characters" label="#$@" name="characters"/>
+      </div>    
     </fieldset>
   </div>
   );

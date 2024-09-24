@@ -1,3 +1,4 @@
+import { LuCopy } from "react-icons/lu";
 interface ButtonProps {
     onClick?:(e: React.MouseEvent<HTMLButtonElement>) => any;
 }
@@ -5,10 +6,10 @@ interface ButtonProps {
 export const Button:React.FC<ButtonProps> = ({onClick}) => {
     return (
         <button
-          className="bg-red-600 hover:bg-red-700 mt-3 py-1 px-2 rounded text-white text-lg"
+          className="absolute right-0 py-1.5 px-2 bg-blue-600 hover:bg-blue-700  rounded-r-md rounded-e-md text-white text-lg"
           // onClick={onClick}
         >
-          Copy
+          <LuCopy size={30}  />
         </button>
     )
 }

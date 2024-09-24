@@ -7,8 +7,8 @@ interface InputProps {
 
 export const InputShow: React.FC<InputProps> = ({value}) => {
     return (
-        <div className="">
-        <input className="border p-2 rounded mr-3" type="text" value={value} />
+        <div className="relative flex items-center justify-center mt-2">
+        <input className="py-2 px-2 mr-3 w-72 border rounded" type="text" value={value} />
         <Button/>
       </div>
     )

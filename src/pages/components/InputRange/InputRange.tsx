@@ -5,8 +5,8 @@ interface InputProps {
 
 export const InputRange: React.FC<InputProps> = ({ value, onChange }) => {
   return (
-    <div>
-      <label>
+    <div className="mt-2">
+      <label className="text-lg">
         Number of characters: <span>{value}</span>
       </label>
       <input
